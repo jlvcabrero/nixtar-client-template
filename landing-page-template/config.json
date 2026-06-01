@@ -1,0 +1,40 @@
+{
+  "nombre": "Mi Negocio",
+  "giro": "Negocio local",
+  "ciudad": "Cuautitlán Izcalli",
+  "estado": "Estado de México",
+  "telefono": "5512345678",
+  "whatsapp": "525512345678",
+  "direccion": "Av. Principal 123",
+  "instagram": "minegocio",
+  "facebook": "minegocio",
+  "horarios": [
+    { "dia": "Lunes - Viernes", "horas": "9:00 - 18:00" },
+    { "dia": "Sábado", "horas": "9:00 - 14:00" },
+    { "dia": "Domingo", "horas": "Cerrado" }
+  ],
+  "headline": "Tu Negocio de Confianza",
+  "subheadline": "Servicio profesional y personalizado para cada cliente",
+  "about": "Somos un negocio local comprometido con la calidad y el servicio al cliente. Llevamos años sirviendo a nuestra comunidad con dedicación y profesionalismo.",
+  "servicios": [
+    { "nombre": "Servicio 1", "descripcion": "Descripción del primer servicio que ofrecemos con calidad garantizada." },
+    { "nombre": "Servicio 2", "descripcion": "Descripción del segundo servicio que ofrecemos con calidad garantizada." },
+    { "nombre": "Servicio 3", "descripcion": "Descripción del tercer servicio que ofrecemos con calidad garantizada." },
+    { "nombre": "Servicio 4", "descripcion": "Descripción del cuarto servicio que ofrecemos con calidad garantizada." },
+    { "nombre": "Servicio 5", "descripcion": "Descripción del quinto servicio que ofrecemos con calidad garantizada." },
+    { "nombre": "Servicio 6", "descripcion": "Descripción del sexto servicio que ofrecemos con calidad garantizada." }
+  ],
+  "por_que_elegirnos": [
+    { "titulo": "Calidad garantizada", "descripcion": "Utilizamos los mejores materiales y técnicas para asegurar resultados excepcionales." },
+    { "titulo": "Servicio personalizado", "descripcion": "Nos adaptamos a tus necesidades específicas para brindarte la mejor experiencia." },
+    { "titulo": "Años de experiencia", "descripcion": "Más de una década respaldando a nuestros clientes con profesionalismo y dedicación." }
+  ],
+  "resenas": [
+    { "nombre": "María G.", "texto": "Excelente servicio, muy profesionales y puntuales. Lo recomiendo ampliamente." },
+    { "nombre": "Carlos R.", "texto": "Muy buena atención, precios justos y trabajo de calidad. Volveré sin duda." },
+    { "nombre": "Ana L.", "texto": "El mejor negocio de la zona. Siempre quedo satisfecha con el resultado." }
+  ],
+  "cta": "Contáctanos ahora",
+  "meta_title": "Mi Negocio | Cuautitlán Izcalli",
+  "meta_description": "Negocio local en Cuautitlán Izcalli. Servicio profesional y de calidad para toda la familia."
+}
