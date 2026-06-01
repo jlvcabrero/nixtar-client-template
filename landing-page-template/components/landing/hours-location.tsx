@@ -1,10 +1,5 @@
 import { Clock, MapPin, Map } from "lucide-react"
-
-const schedule = [
-  { day: "Lunes - Viernes", hours: "HH:MM - HH:MM" },
-  { day: "Sábado", hours: "HH:MM - HH:MM" },
-  { day: "Domingo", hours: "CERRADO" },
-]
+import config from "@/lib/siteConfig"
 
 export function HoursLocation() {
   return (
@@ -30,14 +25,14 @@ export function HoursLocation() {
               <h3 className="text-xl font-semibold text-foreground">Horarios de atención</h3>
             </div>
             <div className="space-y-4">
-              {schedule.map((item, index) => (
+              {config.horarios.map((item, index) => (
                 <div
                   key={index}
                   className="flex items-center justify-between py-3 border-b border-border last:border-0"
                 >
-                  <span className="text-foreground font-medium">{item.day}</span>
-                  <span className={`${item.hours === "CERRADO" ? "text-destructive" : "text-muted-foreground"}`}>
-                    {item.hours}
+                  <span className="text-foreground font-medium">{item.dia}</span>
+                  <span className={`${item.horas === "Cerrado" ? "text-destructive" : "text-muted-foreground"}`}>
+                    {item.horas}
                   </span>
                 </div>
               ))}
@@ -48,7 +43,7 @@ export function HoursLocation() {
           <div className="bg-card rounded-2xl shadow-md overflow-hidden">
             <div className="aspect-[4/3] lg:aspect-auto lg:h-full min-h-[300px] bg-muted flex flex-col items-center justify-center">
               <Map className="w-12 h-12 text-muted-foreground mb-3" />
-              <span className="text-muted-foreground text-sm">GOOGLE_MAPS_EMBED</span>
+              <span className="text-muted-foreground text-sm text-center px-4">{config.direccion}</span>
             </div>
           </div>
         </div>
@@ -57,7 +52,7 @@ export function HoursLocation() {
         <div className="mt-8 text-center">
           <div className="inline-flex items-center gap-2 text-muted-foreground">
             <MapPin className="w-5 h-5 text-primary" />
-            <span>DIRECCION_COMPLETA, CIUDAD, ESTADO</span>
+            <span>{config.direccion}, {config.ciudad}, {config.estado}</span>
           </div>
         </div>
       </div>

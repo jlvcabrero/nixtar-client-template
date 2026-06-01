@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import config from "@/lib/siteConfig"
 
 export function CtaBanner() {
   return (
@@ -17,9 +18,9 @@ export function CtaBanner() {
           size="lg"
           className="bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-xl text-lg px-10 py-7 shadow-lg hover:shadow-xl transition-all"
         >
-          <Link href="https://wa.me/TELEFONO" target="_blank">
+          <Link href={`https://wa.me/${config.whatsapp}`} target="_blank">
             <MessageCircle className="w-6 h-6 mr-3" />
-            Escríbenos al TELEFONO
+            {config.cta}
           </Link>
         </Button>
       </div>

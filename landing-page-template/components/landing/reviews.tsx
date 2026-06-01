@@ -1,25 +1,5 @@
 import { Star } from "lucide-react"
-
-const reviews = [
-  {
-    id: 1,
-    quote: "RESENA_1",
-    name: "CLIENTE_1",
-    rating: 5,
-  },
-  {
-    id: 2,
-    quote: "RESENA_2",
-    name: "CLIENTE_2",
-    rating: 5,
-  },
-  {
-    id: 3,
-    quote: "RESENA_3",
-    name: "CLIENTE_3",
-    rating: 5,
-  },
-]
+import config from "@/lib/siteConfig"
 
 export function Reviews() {
   return (
@@ -37,28 +17,25 @@ export function Reviews() {
 
         {/* Reviews Grid */}
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {reviews.map((review) => (
+          {config.resenas.map((review, index) => (
             <div
-              key={review.id}
+              key={index}
               className="bg-background rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow"
             >
               {/* Star Rating */}
               <div className="flex gap-1 mb-4">
-                {[...Array(review.rating)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="w-5 h-5 fill-amber-400 text-amber-400"
-                  />
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
                 ))}
               </div>
 
               {/* Quote */}
               <blockquote className="text-foreground mb-4 leading-relaxed">
-                &ldquo;{review.quote}&rdquo;
+                &ldquo;{review.texto}&rdquo;
               </blockquote>
 
               {/* Reviewer Name */}
-              <p className="text-primary font-semibold">{review.name}</p>
+              <p className="text-primary font-semibold">{review.nombre}</p>
             </div>
           ))}
         </div>

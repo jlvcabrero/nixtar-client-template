@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Menu, X, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import config from "@/lib/siteConfig"
 
 const navLinks = [
   { href: "#inicio", label: "Inicio" },
@@ -24,6 +25,13 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  const initials = config.nombre
+    .split(" ")
+    .slice(0, 2)
+    .map((w: string) => w[0])
+    .join("")
+    .toUpperCase()
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -37,10 +45,10 @@ export function Header() {
           {/* Logo */}
           <Link href="#inicio" className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">NN</span>
+              <span className="text-primary-foreground font-bold text-lg">{initials}</span>
             </div>
             <span className={`font-bold text-lg hidden sm:block transition-colors ${isScrolled ? "text-foreground" : "text-white"}`}>
-              NOMBRE_NEGOCIO
+              {config.nombre}
             </span>
           </Link>
 
@@ -65,7 +73,7 @@ export function Header() {
               asChild
               className="hidden sm:flex bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-xl"
             >
-              <Link href="https://wa.me/TELEFONO" target="_blank">
+              <Link href={`https://wa.me/${config.whatsapp}`} target="_blank">
                 <MessageCircle className="w-4 h-4 mr-2" />
                 Escríbenos
               </Link>
@@ -104,7 +112,7 @@ export function Header() {
                 asChild
                 className="bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-xl mt-2"
               >
-                <Link href="https://wa.me/TELEFONO" target="_blank">
+                <Link href={`https://wa.me/${config.whatsapp}`} target="_blank">
                   <MessageCircle className="w-4 h-4 mr-2" />
                   Escríbenos
                 </Link>

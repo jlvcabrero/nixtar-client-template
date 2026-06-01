@@ -1,4 +1,5 @@
 import { Users, Clock, ThumbsUp } from "lucide-react"
+import config from "@/lib/siteConfig"
 
 const stats = [
   { icon: Clock, value: "10+", label: "años" },
@@ -17,14 +18,8 @@ export function AboutUs() {
               ¿Quiénes somos?
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Somos <strong className="text-foreground">NOMBRE_NEGOCIO</strong>, tu aliado de confianza en CIUDAD. 
-              DESCRIPCION_DEL_NEGOCIO. Nos dedicamos a ofrecer servicios de la más alta calidad, 
-              con un enfoque personalizado para cada uno de nuestros clientes.
-            </p>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-              Con más de una década de experiencia en el mercado, hemos construido 
-              relaciones duraderas basadas en la confianza, profesionalismo y 
-              resultados excepcionales.
+              Somos <strong className="text-foreground">{config.nombre}</strong>, tu aliado de confianza en {config.ciudad}.{" "}
+              {config.about}
             </p>
 
             {/* Stats */}
@@ -50,10 +45,9 @@ export function AboutUs() {
           <div className="relative">
             <div className="aspect-[4/3] rounded-2xl bg-muted overflow-hidden">
               <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/20 to-primary/5">
-                <span className="text-muted-foreground text-sm">IMAGEN_ABOUT</span>
+                <span className="text-muted-foreground text-sm">{config.nombre}</span>
               </div>
             </div>
-            {/* Decorative element */}
             <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/10 rounded-2xl -z-10" />
           </div>
         </div>
