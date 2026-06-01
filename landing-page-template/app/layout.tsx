@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import config from '../config.json'
 import './globals.css'
 
 const inter = Inter({ 
@@ -9,23 +10,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'NOMBRE_DEL_NEGOCIO | Tu negocio de confianza',
-  description: 'DESCRIPCION_DEL_NEGOCIO - Tu aliado de confianza en CIUDAD. Servicios profesionales con años de experiencia.',
-  generator: 'v0.app',
+  title: config.meta_title,
+  description: config.meta_description,
   icons: {
     icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
+      { url: '/icon-light-32x32.png', media: '(prefers-color-scheme: light)' },
+      { url: '/icon-dark-32x32.png', media: '(prefers-color-scheme: dark)' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
     ],
     apple: '/apple-icon.png',
   },
